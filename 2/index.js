@@ -44,13 +44,9 @@ function init (rowCount,colCount,minLandMineCount,maxLandMineCount){
         clearInterval(timeHandle);
         document.getElementById("begin").disabled=""
         if(status){
-            let name=document.getElementById('name').innerText
-            let score=document.getElementById('costTime').innerText
-            xmlhttp.open('post','http://139.9.81.203:8090/gameRecord/mine',true)//成绩提交服务器
-            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xmlhttp.send('name='+name+'&scroe'+score+"&order=1")
+            alert('小伙子，不错！！')
         }else{
-            alert('扫雷失败!')
+            alert('这都能点到雷!')
         }
     };
     jms.landMineCallBack=function(count){
